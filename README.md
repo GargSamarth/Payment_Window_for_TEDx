@@ -6,3 +6,5 @@ To open the following web page:-
 ### 3.Open cmd and bring it to your directory (cd C://user/user_name/...)
 ### 4.run the surver (node index.js)
 ### 5.Open your browser and open it at port number 3000 (localhost:3000)
+
+##### Third form is a dummy payment window, instead of that we can use payu API.
