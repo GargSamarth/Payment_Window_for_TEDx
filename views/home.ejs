@@ -1,0 +1,132 @@
+<%- include("partials/header") %>
+
+
+
+<div class="card" style="width: 30rem; margin: 50px auto; background-color: transparent;">
+
+  <!-- progressbar -->
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: <%= value %>%" aria-valuenow="<%= value %>" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+<div class="card mt-2 p-3 bg-dark rounded border-0 bevelBox" style="box-shadow: 2px 3px 3px 3px #7a7474; opacity: 1; background: url('img/card.png'); background-repeat: no-repeat; background-size: cover;">
+
+  <!-- forms -->
+  <fieldset id="box-1">
+    <form class="text-light" style="opacity: 1;" id="form1" method="POST">
+      <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input type="text" class="form-control" id="FirstName" aria-describedby="FirstName" required>
+      </div>
+      <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input type="text" class="form-control" id="LastName" aria-describedby="LastName" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="dob">Date of Birth</label>
+          <input type="date" class="form-control" id="dob" placeholder="dob">
+        </div>
+        <div class="form-group col-md-6">
+        <label for="Gender">Gender</label>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons" id="Gender">
+            <label class="btn btn-secondary form-control" for="male">
+              <input type="radio" name="male" id="male"> Male
+            </label>
+            <label class="btn btn-secondary form-control" for="female">
+              <input type="radio" name="female" id="female"> Female
+            </label>
+            <label class="btn btn-secondary form-control" for="others">
+              <input type="radio" name="others" id="others"> Others
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">State</label>
+          <select id="inputState" class="form-control" required>
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputZip">Zip</label>
+          <input type="text" class="form-control" id="inputZip" required>
+        </div>
+      </div>
+      <p class="btn btn-secondary next submit" type="submit" name="submit">Submit & Next</p>
+    </form>
+
+    <form class="text-light active" style="opacity: 1;" id="form2" method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" required>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="Check1" required>
+        <label class="form-check-label" for="exampleCheck1"><small>I agree to all the  terms and conditions.</small></label>
+      </div>
+      <p class="btn btn-secondary previous">Previous</p>
+      <p class="btn btn-secondary next submit" type="submit">Submit & Next</p>
+    </form>
+
+    <form class="text-light active" style="opacity: 1;" id="form3" method="POST">
+        <div class="form-group col-md-6">
+          <label for="payment">Payment</label>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary form-control" for="debit" style="width: 20rem;">
+              <input type="radio" name="debit" id="debit"> Debit Card
+            </label>
+            <label class="btn btn-secondary form-control" for="credit">
+              <input type="radio" name="credit" id="credit"> Credit Card
+            </label>
+          </div>
+        </div>
+      <div class="form-group">
+        <label for="nameoncard">Name on Card</label>
+        <input type="text" class="form-control" aria-describedby="cardhelp" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="nameoncard">Exp Date</label>
+          <input type="month" class="form-control" aria-describedby="cardhelp" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="nameoncard">CVV</label>
+          <input type="number" class="form-control" aria-describedby="cardhelp" required>
+        </div>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+        <label class="form-check-label" for="exampleCheck1"><small>I agree to all the  terms and conditions.</small></label>
+      </div>
+      <p class="btn btn-secondary previous">Previous</p>
+      <p type="submit" class="btn btn-secondary submit">Submit</p>
+    </form>
+  </fieldset>
+</div>
+</div>
+
+<%- include("partials/footer") %>
